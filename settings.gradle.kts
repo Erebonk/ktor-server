@@ -1,2 +1,2 @@
-rootProject.name = "ktor-client"
+rootProject.name = "ktor-server"
 
