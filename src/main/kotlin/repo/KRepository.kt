@@ -9,7 +9,11 @@ object KRepository {
 
     val users = mutableListOf(User(1, "Max", "Shaker", "emasd123@gmail.com"))
 
-    fun getAll() = cars
+    private fun <R> carsSynchronized(block: () -> R): R = synchronized(cars) {
+        return block()
+    }
+
+    fun getAll() = carsSynchronized { cars.toList() }
 
     fun get(id: String) : Car? = cars.find { car -> car.id.toString() == id }
 
@@ -18,6 +22,5 @@ object KRepository {
             return users.find { c.userId == it.id }
         throw NoSuchElementException("There's not the user here.")
     }
-
 
 }

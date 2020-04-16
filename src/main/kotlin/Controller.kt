@@ -37,7 +37,7 @@ fun Application.main() {
         get(CARS_ENDPOINT) {
             errorAware {
                 log.info("Get all cars entities")
-                call.respond(KRepository::getAll)
+                call.respond(KRepository.getAll())
             }
         }
 
