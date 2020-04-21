@@ -18,6 +18,7 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
+    compile("org.litote.kmongo:kmongo-coroutine:4.0.0")
     compile("io.ktor:ktor-server-netty:$ktor_version")
     compile("io.ktor:ktor-gson:$ktor_version")
     compile("ch.qos.logback:logback-classic:1.2.3")
