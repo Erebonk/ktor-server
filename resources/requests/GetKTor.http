@@ -1,0 +1,8 @@
+### get cars
+GET http://localhost:8080/cars
+Accept: application/json
+Authorization: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoidGVzdCJ9.96At6bwFhxebk4xk4tpkOFj-3ThxkLFNHkHaKoedOfA"
+
+### hello ktor
+GET http://localhost:8080/
+Content-Type: application/json
